@@ -1,31 +1,79 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+  font-family: 'Roboto', sans-serif !important;
+  overflow: hidden;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
+  background: url("https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+  background-size: cover;
+  background-position:center;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
+.App-header .ovl{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-header ion-icon{
+  font-size: 150px;
+  animation: anim-glow 10s ease infinite;
+  color: #0ff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+}
+
+@keyframes anim-glow {
+	from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+
+}
 .App-link {
   color: #61dafb;
+}
+.App-header .ovl h2{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+
+.App-header .ovl .btn{
+  padding: 10px 20px;
+  background: #000;
+  border: 3px solid #61dafb;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+.App-header .ovl .btn:hover{
+  box-shadow:inset -2px -2px 10px #61dafb, -2px -2px 15px #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +83,30 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.navbar{
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  display: flex;
+  position: relative;
+}
+.navbar .brand{
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+.navbar ul{
+  list-style: none;
+  display: inline;
+  position: absolute;
+  right: 30px;
+  top: 0px;
+}
+.navbar ul li{
+  list-style: none;
+  display: inline;
+  padding: 12px;
 }
